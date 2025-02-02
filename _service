@@ -16,4 +16,15 @@
     <param name="compression">gz</param>
     <param name="file">*.tar</param>
   </service>
+
+  <service name="run" mode="buildtime">
+    <param name="regexfile_create.sh"></param>
+  </service>
+  
+  <service name="perl_regex" mode="buildtime">
+    <param name="file">anbox-modules.spec</param>
+    <param name="regexfile">regexfile.pl</param>
+    <param name="outfile">anbox-modules.spec</param>
+  </service>
+
 </services>
